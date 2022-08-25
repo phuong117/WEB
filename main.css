@@ -9,31 +9,49 @@ html {
 #main {
 }
 #header {
-background-color: brown;
-height: 50px; 
+    height: 46px; 
+    background-color: #000;
 }
-#nav {
-
-}
-#nav li {
-    display: inline-block;      
-}
-#nav li a {
-    color: rgb(238, 227, 227);
-    line-height: 50px;
-    text-decoration: none;
-    padding: 0 50px 0 50px;
+#nav > li {
     display: inline-block;
 }
+#nav li {    
+    position: relative;
+}
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+#nav li a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 44px;
+    display: block;
+}
+#nav li:hover .subnav {
+    display: block;
+}
+#nav > li:hover > a,
+#nav .subnav li:hover a {
+    color: #000;
+    background-color: #ccc;
+}
 #nav li:hover a {
-    color: aliceblue;
-    background-color: black;
+    color: #000;
+    background-color: #ccc;
 }
 #nav .subnav {
-    /*display: none;*/
+    display: none;
+    position: absolute;
+    background-color: #fff;
+}
+#nav .subnav a {
+    color: #000;
 }
 #slider {
-
+    min-height: 500px;
+    background-color: #333;
 }
 
 #content {
